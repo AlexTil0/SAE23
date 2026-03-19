@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ajout d'un article</title>
+</head>
+<body>
+<h2>Ajouter un article</h2>
+<form action="ajout.php" method="post">
+<fieldset>
+<legend><b>Insérer le nouveau article </b></legend>
+<table>
+<tbody>
+<tr>
+<td>Id_article :
+</td>
+<td> <input="text" name="id_article" value="" required /><br />
+
+</td>
+</tr>
+<tr>
+<td>Designation : </td>
+<td> <input="text" name="designation" value="" required /><br />
+
+</td>
+</tr>
+<tr>
+<td>Prix : </td>
+<td> <input="text" name="prix" value="" required /><br />
+
+</td>
+</tr>
+<tr>
+<td>Catégorie : </td>
+<td><select name="categorie" size="1">
+<option value="video"> Vidéo</option>
+<option value="photo"> Photo</option>
+<option value="informatique"> Informatique</option>
+<option value="Téléphonie"> Téléphonie</option>
+<option value="divers"> Divers</option>
+</select></td>
+</tr>
+
+<tr>
+<td colspan="2">
+<input type="submit" value="Enregistrer" name="envoi" />
+
+<input type="submit" value="Page d'accueil" name="envoi" />
+</td>
+</tr>
+</tbody>
+</table>
+</fieldset>
+</form>
+</body>
+</html>
