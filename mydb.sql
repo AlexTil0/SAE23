@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : sam. 21 mars 2026 à 12:36
+-- Généré le : mar. 24 mars 2026 à 16:55
 -- Version du serveur : 10.4.32-MariaDB
 -- Version de PHP : 8.2.12
 
@@ -39,6 +39,56 @@ CREATE TABLE `article` (
 --
 
 INSERT INTO `article` (`id_article`, `designation`, `prix`, `categorie`) VALUES
+('ACC0000001', 'Manette PS5 DualSense', 69.99, 'Ps5'),
+('ACC0000002', 'Station de recharge DualSense', 29.99, 'Ps5'),
+('ACC0000003', 'Casque Pulse 3D', 99.99, 'Ps5'),
+('ACC0000004', 'Caméra HD PS5', 59.99, 'Ps5'),
+('ACC0000005', 'Télécommande multimédia PS5', 29.99, 'Ps5'),
+('ACC0000006', 'Manette DualShock 4', 59.99, 'Ps4'),
+('ACC0000007', 'Station de recharge PS4', 24.99, 'Ps4'),
+('ACC0000008', 'Casque gaming PS4', 79.99, 'Ps4'),
+('ACC0000009', 'Caméra PS4', 49.99, 'Ps4'),
+('ACC0000010', 'Support vertical PS4', 14.99, 'Ps4'),
+('ACC0000011', 'Manette Pro Switch', 64.99, 'Nintendo Switch'),
+('ACC0000012', 'Joy-Con gauche/droite', 79.99, 'Nintendo Switch'),
+('ACC0000013', 'Station de recharge Joy-Con', 29.99, 'Nintendo Switch'),
+('ACC0000014', 'Étui de transport Switch', 19.99, 'Nintendo Switch'),
+('ACC0000015', 'Protection écran Switch', 9.99, 'Nintendo Switch'),
+('ACC0000016', 'Clavier gaming mécanique', 129.99, 'PC'),
+('ACC0000017', 'Souris gaming RGB', 49.99, 'PC'),
+('ACC0000018', 'Casque gaming PC', 89.99, 'PC'),
+('ACC0000019', 'Microphone USB', 79.99, 'PC'),
+('ACC0000020', 'Webcam HD', 39.99, 'PC'),
+('ACC0000021', 'Manette Xbox Series X', 59.99, 'PC'),
+('ACC0000022', 'Manette Xbox Elite Series 2', 149.99, 'PC'),
+('ACC0000023', 'Volant Logitech G29', 299.99, 'Ps5'),
+('ACC0000024', 'Volant Thrustmaster T248', 349.99, 'Ps5'),
+('ACC0000025', 'Support casque gaming', 19.99, 'PC'),
+('ACC0000026', 'Hub USB 3.0', 24.99, 'PC'),
+('ACC0000027', 'Disque dur externe 2To', 109.99, 'Ps4'),
+('ACC0000028', 'SSD externe 1To', 129.99, 'Ps5'),
+('ACC0000029', 'Station refroidissement PS5', 29.99, 'Ps5'),
+('ACC0000030', 'Ventilateur externe PS4', 19.99, 'Ps4'),
+('ACC0000031', 'Grip manette PS5', 14.99, 'Ps5'),
+('ACC0000032', 'Grip manette PS4', 12.99, 'Ps4'),
+('ACC0000033', 'Coque protection Switch', 14.99, 'Nintendo Switch'),
+('ACC0000034', 'Chargeur voiture Switch', 19.99, 'Nintendo Switch'),
+('ACC0000035', 'Adaptateur manette PC', 24.99, 'PC'),
+('ACC0000036', 'Tapis RGB gaming', 29.99, 'PC'),
+('ACC0000037', 'Support écran réglable', 39.99, 'PC'),
+('ACC0000038', 'Lampe LED bureau gaming', 34.99, 'PC'),
+('ACC0000039', 'Batterie externe Switch', 49.99, 'Nintendo Switch'),
+('ACC0000040', 'Dock alternatif Switch', 59.99, 'Nintendo Switch'),
+('CON0000001', 'PlayStation 5', 549.99, 'Ps5'),
+('CON0000002', 'PlayStation 5 Digital Edition', 449.99, 'Ps5'),
+('CON0000003', 'PlayStation 4', 299.99, 'Ps4'),
+('CON0000004', 'PlayStation 4 Slim', 249.99, 'Ps4'),
+('CON0000005', 'PlayStation 4 Pro', 349.99, 'Ps4'),
+('CON0000006', 'Nintendo Switch', 299.99, 'Nintendo Switch'),
+('CON0000007', 'Nintendo Switch OLED', 349.99, 'Nintendo Switch'),
+('CON0000008', 'Nintendo Switch Lite', 219.99, 'Nintendo Switch'),
+('CON0000009', 'Steam Deck', 399.99, 'PC'),
+('CON0000010', 'ROG Ally', 699.99, 'PC'),
 ('MOB0000001', 'Clash of Clans', 0.00, 'Mobile'),
 ('MOB0000002', 'Genshin Impact', 0.00, 'Mobile'),
 ('MOB0000003', 'Call of Duty Mobile', 0.00, 'Mobile'),
@@ -309,6 +359,49 @@ INSERT INTO `article` (`id_article`, `designation`, `prix`, `categorie`) VALUES
 ('SW00000053', 'Snipperclips', 19.99, 'Nintendo Switch'),
 ('SW00000054', 'Aragami', 19.99, 'Nintendo Switch');
 
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `client`
+--
+
+CREATE TABLE `client` (
+  `id_client` mediumint(9) NOT NULL,
+  `nom` char(50) NOT NULL,
+  `prenom` char(50) NOT NULL,
+  `age` tinyint(3) UNSIGNED DEFAULT NULL,
+  `adresse` char(100) NOT NULL,
+  `ville` char(50) NOT NULL,
+  `mail` char(100) NOT NULL,
+  `code` char(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Déchargement des données de la table `client`
+--
+
+INSERT INTO `client` (`id_client`, `nom`, `prenom`, `age`, `adresse`, `ville`, `mail`, `code`) VALUES
+(2, 'zar\"aé\"r', 'a\"r&aér&é', 11, 'ré&ré&r&é', '&éré&ré&', 'yach9346@gmail.com', 'é&ré&ré&');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `commande`
+--
+
+CREATE TABLE `commande` (
+  `id_comm` mediumint(8) UNSIGNED NOT NULL,
+  `id_client` mediumint(9) NOT NULL,
+  `date` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Déchargement des données de la table `commande`
+--
+
+INSERT INTO `commande` (`id_comm`, `id_client`, `date`) VALUES
+(1, 2, '2026-03-24');
+
 --
 -- Index pour les tables déchargées
 --
@@ -318,6 +411,45 @@ INSERT INTO `article` (`id_article`, `designation`, `prix`, `categorie`) VALUES
 --
 ALTER TABLE `article`
   ADD PRIMARY KEY (`id_article`);
+
+--
+-- Index pour la table `client`
+--
+ALTER TABLE `client`
+  ADD PRIMARY KEY (`id_client`);
+
+--
+-- Index pour la table `commande`
+--
+ALTER TABLE `commande`
+  ADD PRIMARY KEY (`id_comm`,`id_client`),
+  ADD KEY `id_client` (`id_client`);
+
+--
+-- AUTO_INCREMENT pour les tables déchargées
+--
+
+--
+-- AUTO_INCREMENT pour la table `client`
+--
+ALTER TABLE `client`
+  MODIFY `id_client` mediumint(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT pour la table `commande`
+--
+ALTER TABLE `commande`
+  MODIFY `id_comm` mediumint(8) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- Contraintes pour les tables déchargées
+--
+
+--
+-- Contraintes pour la table `commande`
+--
+ALTER TABLE `commande`
+  ADD CONSTRAINT `commande_ibfk_1` FOREIGN KEY (`id_client`) REFERENCES `client` (`id_client`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
